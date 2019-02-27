@@ -3,27 +3,25 @@
     <head>
         <title>javascript</title>
         <script language="javascript">
-            document.write("welcome to this channel : keep learning");
-            document.write("<br>");
-
-            var a=3;
-            var b=3;
-            var c=a+b;
+          function myfun(){
+              var choise= document.getElementById("choise").value;
+              alert(choise);
+              switch(choise){
+                  case "add":
+                  document.write('this is for add');
+                  default:
+                  document.write("invalid");        
+              }
+          }
             
-            document.write(c);
-            document.write("<br>");
-
-            if(c%2==0){
-                document.write(c);
-            }
-            else{
-                document.write("the number is odd");
-            }
 
 
         </script>
     </head>
     <body>
+            
+            <input type="text" name="" id="choise"><br>
+        <button onclick="myfun()">click</button>
        
     </body>
 </html>

@@ -3,6 +3,17 @@
     <head>
         <title>javascript</title>
         <script language="javascript">
+            function myfun(){
+                var page= confirm("do you want to clean your device?");
+                if(page == true){
+                    window.open("http/:www.quickheal.com");
+                    return true 
+                }
+                else{
+                    document.write();
+                    return false;
+                }
+            }
             var prompt= prompt('what is your name plz?');
             if(prompt!=""){
                 document.write("you are just use prompt box Mr."+name);
@@ -15,7 +26,8 @@
 
         </script>
     </head>
-    <body>
+    <body><br>
+        <input type="button" name="" onclick="myfun()" value="click to clean">
             
          
        

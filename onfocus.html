@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+        <script language="javascript">
+          
+                s1 = new String(myform.form.value)
+                function myfun(){
+                    s1="this is the new string"
+                    document.myform.form.value= s1.toUpperCase()
+                }
+            
+            
+
+
+        </script>
+    </head>
+    <body><br>
+        <form name="myform">
+        <input type="text" name="form" onfocus="myfun()" value="click to clean">
+        </form> 
+         
+       
+    </body>
+</html>

@@ -9,6 +9,9 @@
                     s1="this is the new string"
                     document.myform.form.value= s1.toUpperCase()
                 }
+                function myblur(){
+                    alert("you enter your email confirm it your");
+                }
             
             
 
@@ -18,7 +21,9 @@
     <body><br>
         <form name="myform">
         <input type="text" name="form" onfocus="myfun()" value="click to clean">
-        </form> 
+        </form><br><br><br>
+        <input type="text" name="mytext" placeholder="username" onBlur="myblur()">
+        <button type="submit" value="submit">click me</button>
          
        
     </body>

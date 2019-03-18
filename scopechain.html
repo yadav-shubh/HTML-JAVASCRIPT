@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+        <script language="javascript">
+            var x = 10;
+            console.log(x);
+           f1();
+           function f1(){
+               debugger;
+               var v1 = "shubham";
+               console.log(x);
+               f2();
+               function f2(){
+                   debugger;
+                   var v2 = "lakhan";
+                    console.log(x);
+                    f3();
+                    function f3(){
+                        debugger;
+                        var v3 = "arun";
+                        // this called climb up of scope change
+                        console.log(v1);
+                        console.log(v2);
+                        console.log(v3);
+                        console.log(x);
+                    }
+                }
+            }
+
+
+        </script>
+    </head>
+    <body>
+       
+            
+         
+       
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+        <script language="javascript">
+            function rev(){
+            var Reverce = document.getElementById('ip').value;
+            var output ="";
+
+            for(var i=Reverce.length-1;i>=0;i--){
+                output += Reverce[i];
+            }
+            document.getElementById('op').value=output;
+            }
+          
+        </script>
+    </head>
+    <body>
+        <h2 style="text-align:center">Reverce string in real time </h2>
+        <input type="text" id="ip" name="" onkeyup='rev()'>
+        <input type="text" name="" id="op">
+       
+            
+         
+       
+    </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styleform.css">
+        <style>
+            form{
+                width: 500px;
+                background-color:none;
+                padding: 20px;
+                margin: 0 auto;
+                border: 2px solid black;
+            }
+            input[type="text"],input[type="password"],select{
+                width: 300px;
+                height:20px;
+                border-bottom: 1px silver solid;
+                outline: none;
+                background: #f1f1f1; 
+                
+                }
+            textarea{
+                resize: none;
+                background: white;
+                border-bottom: 1px silver solid;
+                outline: none;
+                background: #f1f1f1; 
+               
+            }
+           input[type='submit']{
+               color: red;
+               background-color: silver;
+               border: 1px solid black;
+               text-align: center;
+               width: 150px ;
+               height: 20px;
+               
+
+           }
+           input[type="submit"]:hover{
+               background-color: lightblue; 
+           }
+           input[type="text"]:focus , input[type="password"]:focus,textarea:focus{
+                background-color: rgb(247, 72, 232);
+                
+           }
+
+           input[type="text"]:hover , input[type="password"]:hover,select:hover,textarea:hover {
+               background-color: lightblue;
+           }
+        </style>
+        <script type="text/javascript">
+            function validate() {
+                var uname = document.getElementById('uname');
+                var pname = document.getElementById('pname');
+                if (uname.value == "" || pname.value == "")  {
+                    alert("No black value are allowed");
+                }
+                else
+                {
+                    
+                }
+            }
+        </script>
+    </head>
+    <body>
+            <form onsubmit="validate()">
+                <h2>Fill the form<hr></h2>
+            <table>
+                    <tr>
+                        <td><label for="User" id="uname">User name</label></td>
+                        <td><input type="text" id="User" name="user"></td>
+                    </tr><br>
+                    <tr>
+                        <td><label for="pass" id="pname">Password</label></td>
+                        <td><input type="password" id="pass" name="pass"><br></td>
+                    </tr>
+                        <tr>
+                            <td><label>Gender</label></td>
+                            <td>Male: <input name="Gender" type="radio" value="male"><br>Female<input name="Gender" type="radio" value="female"><br><br></td>
+                            
+                        /<tr>
+                        <tr>
+                                <td><label>SKills</label></td>
+                                <td>HTML: <input type="checkbox" name="html" value="html"><br>CSS<input type="checkbox" name="css" value="css"><br>PHP <input type="checkbox" name="php "  value="php"><br><br></td>
+                                
+                        </tr><br>
+                        <tr>
+                                <td><label for="country">Select your country</label></td>
+                                <td>
+                                    <select id="country" name="countyr">
+                                           
+                                        <option value="none">Select your country</option>
+                                        <option value="in">India</option>
+                                        <option value="sl">Sri lanka</option>
+                                        <option value="np">Nepal</option>
+                                        <option value="bn">bhutan</option>
+                                        <option value="mn">Mymamar</option>
+                                    </select><br><br>
+                                </td>
+                                
+                        </tr>
+                        <tr>
+                            <td><lable for="comments">comments</lable></td>
+                            <td><textarea rows="10" cols="40"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value=" Click to submit" name="submit form">
+                            </td>
+                        </tr>
+                </table>
+      </form>
+    </body>
+</html>

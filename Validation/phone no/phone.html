@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type= "text/javascript">
+        function myfun(){
+            var phone = document.getElementById("ema").value;
+            var valid = /^([6-9])([0-9]{9})$/
+            if(valid.test(phone)){
+                document.getElementById("labl").innerHTML="valid";
+                document.getElementById("labl").style.visibility="visible";
+            }
+            else{
+                
+                document.getElementById("labl").innerHTML="Invalid";
+                document.getElementById("labl").style.visibility="visible";
+            }
+        }
+        function rd(){
+               var r1 = document.getElementById("rd1");
+               var r2 = document.getElementById("rd2");
+                if(r1.checked==false && r2.checked==false){
+                    alert("Plz select Maritual status");
+                }  
+        </script>
+    </head>
+    <body>
+            Country Code  : <select>
+                <option>+91</option>
+                <option>+90</option>
+                <option>+92</option>
+            </select>
+            Phone      :    <input type="text" id="ema">
+            <label id="labl" style="visibility: hidden" >Invalid</label><br><br>
+            Maritual Status : <input type="radio" id="rd1" name="mr">Married : <input type="radio"  id="rd2" name="mr">UnMarried
+            <br><br>
+            <a onclick="myfun();rd();" href="#">clickhere</a>
+            
+            
+
+
+    </body>
+</html>

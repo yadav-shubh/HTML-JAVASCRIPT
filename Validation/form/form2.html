@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type= "text/javascript">
+            function myfun(){
+                var email = document.getElementById("ema");
+                var pass = document.getElementById("pas");
+
+                if(email.value ==""){
+                    alert("email field is blank");
+                    return false;
+                }
+                if(pass.value == ""){
+                    alert("Password field is blank");
+                    return false;
+                }
+                if(email.value =="" || pass.value == "" ){
+                    alert(" email and password field is blank");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            E-mail      :    <input type="text" id="ema"><br><br>
+            Password    : <input type="password" id="pas"><br><br>
+            Course      :
+            <select name="country">
+                    <option>None</option>
+                    <option>MCA</option>
+                    <option>BCA</option>
+            </select><br><br>
+            Payment Mode  :
+            Credit card <input type="radio" name= "rd1">  
+            Debit card <input type="radio" name= "rd1">
+            
+            <br><br>
+            <button onclick="return myfun()" type="submit" >Submit</button>
+            <button type="reset" value="Submit">Reset</button>
+        </form>
+
+    </body>
+</html>

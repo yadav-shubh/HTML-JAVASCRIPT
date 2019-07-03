@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type= "text/javascript">
+            function myfun(){
+
+                var email = document.form.email.value;
+                if(email.indexOf('@')<=0){
+                    document.getElementById("mag").innerHTML="** Plz enter in corect format **";
+                    return false;
+                }
+                if((email.charAt(email.length-4) && email.charAt(email.length-3)!='.')){
+                    document.getElementById("mag").innerHTML="** Plz write proper domain name **";
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="form" onsubmit="return myfun()">
+            E-mail : <input type="text" name="email" id="email">
+            <span id="mag"></span>
+            <br><br>
+            <button type="submit" value="Submit">Submit</button>
+        </form>
+
+    </body>
+</html>

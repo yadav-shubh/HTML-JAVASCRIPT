@@ -2,38 +2,10 @@
 <html>
     <head>
         <script type="text/javascript">
-            function validate() {
-                var user = document.getElementById('uname').value;
-                var pass = document.getElementById('pname');
-                var regx = /E00/;
-                if (regx.test(user))  {
-                    alert("valid Username");
-                }
-                else
-                {
-                    alert("Invalid Username");
-                    document.getElementById('label').style.visibility="visible";
-                }
-            }
-        </script>
+        </script>    
     </head>
     <body>
-            <form onsubmit="">
-                <h2>Fill the form<hr></h2>
-            <table>
-                    <tr>
-                        <td>Username<input type="text"id="uname"></td>
-                    </tr>
-                    <label id="label" style="color: red; visibility: hidden;">Invalid Username</label><br>
-                    <tr>
-                        <td><label  id="pname">Password</label></td>
-                        <td><input type="password" id="pass" ><br></td>
-                    </tr>
-                            <td>
-                                <input type="submit" onclick="validate()" value="Click to submit" >
-                            </td>
-                        </tr>
-                </table>
-      </form>
+     <button onclick="getElementById('Mgs').innerHTML = Date()">click me</button>
+     <h2 id="Msg"></h2>
     </body>
 </html>

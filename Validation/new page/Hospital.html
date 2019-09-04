@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <title>Hospital registration detail</title>
+    <head>
+        <h2>Hospital registration Form</h2>
+        <script type="text/javascript">
+            function Validate(){
+                var number = document.getElementById("ema").value;
+
+                var regx = /^([EEE]{3})([a-zA-Z])([1-9])?$/;
+                
+                if(regx.test(number)){
+                    document.getElementById("labl").innerHTML="Valid";
+                    document.getElementById("labl").style.visibility="visible";
+                    document.getElementById("labl").style.color="red";
+
+                }
+                else{
+                    document.getElementById("labl").innerHTML="Invalid";
+                    document.getElementById("labl").style.visibility="visible";
+                    document.getElementById("labl").style.color="red";
+                }
+            }
+        </script>
+        <style>
+            input[type="text"]{
+                margin-left:50px;
+            }
+        </style>
+    </head>
+    <body> 
+                    Patient Name: 
+                    <input type="text" placeholder="Subham Yadav">
+                    <label id="labl" style="color: red; visibility: hidden">Invalid</label>
+                    Patient's file Number:
+                    <input type="text" id="ema" placeholder="Ex - EEEshubham1234"><br>
+                    <br><label>Gender :</label>
+                    Male:<input type="radio" name="male">
+                    Female:<input type="radio" name="female"><br><br>
+                
+                    <button onclick="return Validate()" type="submit" >Submit</button>
+    </body>
+</html>
